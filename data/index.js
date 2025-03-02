@@ -12,17 +12,24 @@ const matk1 = {
     kirjeldus: "Lähme ja oleme kolm päeva vee peal",
     osalejad: ["mati@matkaja.ee", "kati@matkaja.ee", "uudo@ryhkija.ee"]
  }
-   
+ const matk3 = {
+   nimetus: "Rabamatk Viru rabas",
+   pildiUrl: "/assets/raba1.jpg",
+   kirjeldus: "Lähme matkame ühe päeva kaunis rabas",
+   osalejad: ["uudo@ryhkija.ee"]
+
+}
  const matkad = [
     matk1,
     matk2,
+    matk3,
     {
         nimetus: "Mägimatk Otepääl",
-        pildiUrl: "/assets/Hills.png",
+        pildiUrl: "/assets/magi.jpg",
         kirjeldus: "Lähme ja oleme kolm päeva mägedes",
         osalejad: ["uudo@ryhkija.ee"]
-    }
-    
+   
+  }
  ]
 
 

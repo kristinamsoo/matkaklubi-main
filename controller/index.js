@@ -1,4 +1,4 @@
-const {loeMatkadeAndmed, lisaOsaleja, loeUudisedAndmed} = require("../data")
+const {loeMatkadeAndmed, lisaOsaleja} = require("../data")
 
 const naitaMatkad  = (req, res) => {
     const matkad = loeMatkadeAndmed()
