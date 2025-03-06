@@ -1,3 +1,5 @@
+
+
 const matk1 = {
     nimetus: "Sügismatk Kõrvemaal",
     pildiUrl: "/assets/Hills.png",
@@ -58,4 +60,5 @@ const matk1 = {
  module.exports = {
    loeMatkadeAndmed,
    lisaOsaleja
+  
  }
