@@ -1,4 +1,20 @@
+const uudis1 = {
+   nimetus: "pealkiri1",
+   pildiUrl: "/assets/matkaklubi1.jpeg",
+   kirjeldus: "mingi uudis" ,
+   infoLink: "/assets/test.html"
+}
 
+const uudis2 = {
+   nimetus: "pealkiri uus",
+   pildiUrl: "/assets/matkaklubi3.jpg",
+   kirjeldus: "mingi uudis uudis",
+   infoLink: "/assets/test.html"
+}
+
+function loeUudisedAndmed(){
+   return uudised
+ }
 
 const matk1 = {
     nimetus: "Sügismatk Kõrvemaal",
@@ -34,10 +50,17 @@ const matk1 = {
   }
  ]
 
+ const uudised = [
+   uudis1,
+   uudis2
+ ]
+
 
  function loeMatkadeAndmed() {
    return matkad
  }
+
+
 
 
  function lisaOsaleja(matkaIndeks, osalejaEmail) {
@@ -59,6 +82,7 @@ const matk1 = {
  }
  module.exports = {
    loeMatkadeAndmed,
-   lisaOsaleja
+   lisaOsaleja,
+   loeUudisedAndmed
   
  }
