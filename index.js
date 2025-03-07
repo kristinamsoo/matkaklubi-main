@@ -3,7 +3,7 @@ const express = require('express')
 const path = require("path")
 
 
-const {naitaMatkad, naitaMatka, registreeriOsaleja, naitaKontakt} = require("./controller")
+const {naitaMatkad, naitaMatka, registreeriOsaleja, naitaKontakt, naitaUudised, naitaUudis} = require("./controller")
 
 const app = express();
 app.use(express.static("public"))
@@ -26,6 +26,8 @@ app.get('/matk/:id', naitaMatka)
 
 app.get('/kontakt', naitaKontakt)
 
+app.get('/uudised', naitaUudised)
+app.get('/uudis/:id', naitaUudis)
 
 
 app.listen(PORT, () => console.log('Matkaklubi töötab pordil' + PORT))

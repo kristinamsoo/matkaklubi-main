@@ -1,14 +1,14 @@
 const uudis1 = {
-   nimetus: "pealkiri1",
+   nimetus: "PROOV UUDIS 1",
    pildiUrl: "/assets/matkaklubi1.jpeg",
-   kirjeldus: "mingi uudis" ,
+   kirjeldus: "Siia tuleb pikem uudiste kirjeldus tttttttttttttttttttttt",
    infoLink: "/assets/test.html"
 }
 
 const uudis2 = {
-   nimetus: "pealkiri uus",
-   pildiUrl: "/assets/matkaklubi3.jpg",
-   kirjeldus: "mingi uudis uudis",
+   nimetus: "PROOV UUDIS 2",
+   pildiUrl: "/assets/matkaklubi2.jpg",
+   kirjeldus: "Siia tuleb pikem uudiste kirjeldus ttttoooooooooooooooooooooooooooooo",
    infoLink: "/assets/test.html"
 }
 
