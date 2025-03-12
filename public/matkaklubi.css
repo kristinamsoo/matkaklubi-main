@@ -107,7 +107,7 @@ body {
     margin-left: -100px;
 }
 
-.rida {
+.row {
     display: flex;
 }
 
@@ -154,5 +154,8 @@ body {
 
 .matkapilt {
     width: 100%;
-    
+}
+
+.uudispilt {
+    width: 100%;
 }

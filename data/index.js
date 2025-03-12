@@ -1,20 +1,50 @@
+
+
 const uudis1 = {
-   nimetus: "PROOV UUDIS 1",
-   pildiUrl: "/assets/matkaklubi1.jpeg",
-   kirjeldus: "Siia tuleb pikem uudiste kirjeldus tttttttttttttttttttttt",
-   infoLink: "/assets/test.html"
+   nimetus: "Avasta sügisesed rabarajad",
+   pildiUrl: "/assets/raba1.jpg",
+   kirjeldus: "Sügisene raba on matkajaile tõeline pärl. Soomaal toimunud matk viib osalejad läbi laugaste ja männimetsade, pakkudes rahu ja kauneid vaateid.",
+  
 }
 
 const uudis2 = {
-   nimetus: "PROOV UUDIS 2",
+   nimetus: "Jõematk süstadel",
    pildiUrl: "/assets/matkaklubi2.jpg",
-   kirjeldus: "Siia tuleb pikem uudiste kirjeldus ttttoooooooooooooooooooooooooooooo",
-   infoLink: "/assets/test.html"
+   kirjeldus: "Uue matkahooaja avamatk: Matkaklubi kutsub kõiki loodushuvilisi uue hooaja avamatkale! Tule avasta ärkavat loodust, naudi värsket õhku ja mõnusat seltskonda. Marsruut on jõukohane kõigile."
+
+   
+}
+
+const uudis3 = {
+   nimetus: "Uued mägimatkarajad",
+   pildiUrl: "/assets/matkaklubi3.jpg",
+   kirjeldus: "Uued mägimatkarajad ja siinsed loodusrikkused. Tutvu kauni loodusega ja taimestikuga",
+}
+
+const uudis4 = {
+   nimetus: "Uued matkad peredele",
+   pildiUrl: "/assets/matkaklubi2.jpg",
+   kirjeldus: "Matkaklubi kutsub peresid ühisele looduspäevale! Matka käigus õpime tundma metsataimi, otsime loomade jälgi ja peame piknikku.",
+  
+}
+
+const uudis5 = {
+   nimetus: "Alustame uute sügismatkade sarjaga",
+   pildiUrl: "/assets/matkaklubi3.jpg",
+   kirjeldus: "Värvide mäng rabamaastikul. Sügis on Eesti looduses maagiline aeg! Matkame läbi kuldsete lehtede ja hommikuse udu, nautides sügise parimaid vaateid.",
+}
+
+const uudis6 = {
+   nimetus: "Seiklusmatk ekstreemsema elamuse otsijatele",
+   pildiUrl: "/assets/matkaklubi2.jpg",
+   kirjeldus: "Adrenaliini ja katsumusi otsivad matkajad, see üritus on teile! Rada sisaldab tehnilisi tõuse ja looduslikke takistusi. Vajalik on hea füüsiline vorm.",
+  
 }
 
 function loeUudisedAndmed(){
    return uudised
  }
+
 
 const matk1 = {
     nimetus: "Sügismatk Kõrvemaal",
@@ -52,13 +82,39 @@ const matk1 = {
 
  const uudised = [
    uudis1,
-   uudis2
+   uudis2,
+   uudis3,
+   uudis4,
+   uudis5,
+   uudis6
  ]
 
+ const sonumid = []
+
+/*  function lisaUudis({nimetus, kirjeldus}) {
+ uudised.push({nimetus, kirjeldus})
+ } */
+
+/*  function loeUudisedAndmed() {
+   return uudised
+ } */
+
+ function lisaMatk({nimi, sonum}) {
+   matkad.push({nimi, sonum})
+}
 
  function loeMatkadeAndmed() {
    return matkad
  }
+
+
+ function lisaSonum({nimi, sonum}) {
+   sonumid.push({nimi, sonum})
+}
+
+function loeSonumid() {
+   return sonumid
+}
 
 
 
@@ -83,6 +139,9 @@ const matk1 = {
  module.exports = {
    loeMatkadeAndmed,
    lisaOsaleja,
-   loeUudisedAndmed
+   lisaSonum,
+   loeSonumid,
+   loeUudisedAndmed,
+   lisaMatk
   
  }

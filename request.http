@@ -1,0 +1,12 @@
+## lugemine
+GET http://localhost:3030/api/matkad
+
+### saatmine
+
+POST http://localhost:3030/api/sonumid
+Content-Type: application/json
+
+{
+   "nimetus": "matk",
+   "kirjeldus": "matk"
+}

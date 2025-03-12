@@ -1,4 +1,5 @@
-const {loeMatkadeAndmed, lisaOsaleja, loeUudisedAndmed} = require("../data")
+const { lisaMatk} = require("../api_controller")
+const {loeMatkadeAndmed, lisaOsaleja, lisaSonum, loeSonumid, loeUudised, loeUudisedAndmed} = require("../data")
 
 const naitaMatkad  = (req, res) => {
     const matkad = loeMatkadeAndmed()
@@ -48,20 +49,18 @@ const naitaUudised  = (req, res) => {
 
    //todo:loo mall matk.ejs ning malli peal kasuta objekti matk (matk.nimetus matk.pildiurl)
    
-   res.send(`
-      <html>
-         <body>
-            <h1>
-             ${uudis.nimetus}
-            </h1>
-            <div>
-               ${uudis.kirjeldus}
-            <div>
-            </body>
-      </html>
-      `)
+   
    }
- 
+   const tootleSonum = (req, res) => {
+      console.log(req.body)
+      lisaSonum({nimi: req.body.nimi, sonum: req.body.markus})
+      console.log(loeSonumid())
+      res.send(`
+          <h2>Sõnum on edukalt edastatud</h2>
+      `)
+  }
+  
+
  module.exports = {
     naitaMatkad,
     registreeriOsaleja,
@@ -69,11 +68,9 @@ const naitaUudised  = (req, res) => {
     naitaKontakt,
     naitaUudis,
     naitaUudised,
-    loeUudisedAndmed
-   
-
-   
-    
+    lisaMatk,
+    loeUudisedAndmed,
+    tootleSonum
    
  }
 
