@@ -1,16 +1,16 @@
 const { lisaMatk} = require("../api_controller")
-const {loeMatkadeAndmed, lisaOsaleja, lisaSonum, loeSonumid, loeUudised, loeUudisedAndmed} = require("../data")
+const {loeMatkadeAndmed, lisaOsaleja, lisaSonum, loeSonumid} = require("../data")
 
 const naitaMatkad  = (req, res) => {
     const matkad = loeMatkadeAndmed()
     console.log(matkad)
     res.render("pages/index", {matkad: matkad})
  }
-const naitaUudised  = (req, res) => {
+/* const naitaUudised  = (req, res) => {
     const uudised = loeUudisedAndmed()
     console.log(uudised)
     res.render("pages/uudised", {uudised: uudised})
- }
+ } */
 
  const naitaKontakt = (req, res) => {
    res.render("pages/kontakt")
@@ -41,16 +41,17 @@ const naitaUudised  = (req, res) => {
       </html>
       `)
    }
- const  naitaUudis = (req,res) => {
+
+
+ /* const  naitaUudis = (req,res) => {
    const uudised = loeUudisedAndmed ()
    const uudisIndeks = req.params.id
    const uudis = uudised[uudisIndeks]
-   res.render("pages/uudis", {uudis: uudis})
+   res.render("pages/uudis", {uudis: uudis}) */
 
    //todo:loo mall matk.ejs ning malli peal kasuta objekti matk (matk.nimetus matk.pildiurl)
-   
-   
-   }
+      
+   //}
    const tootleSonum = (req, res) => {
       console.log(req.body)
       lisaSonum({nimi: req.body.nimi, sonum: req.body.markus})
@@ -66,11 +67,9 @@ const naitaUudised  = (req, res) => {
     registreeriOsaleja,
     naitaMatka,
     naitaKontakt,
-    naitaUudis,
-    naitaUudised,
     lisaMatk,
-    loeUudisedAndmed,
-    tootleSonum
+    tootleSonum,
+   
    
  }
 

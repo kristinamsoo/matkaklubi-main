@@ -2,11 +2,19 @@
 GET http://localhost:3030/api/matkad
 
 ### saatmine
-
-POST http://localhost:3030/api/sonumid
+POST http://localhost:3030/api/matkad
 Content-Type: application/json
 
 {
-   "nimetus": "matk",
-   "kirjeldus": "matk"
+   "nimetus": "matk1",
+   "kirjeldus": "kirjeldus"
+}
+
+### matka loomine
+POST http://localhost:3030/api/matk
+Content-Type: application/json
+
+{
+   "nimetus": "minu unistus on süstamatk",
+   "kirjeldus": "ümber Hiiumaa"
 }

@@ -3,9 +3,9 @@ const express = require('express')
 const path = require("path")
 
 
-const {naitaMatkad, naitaMatka, registreeriOsaleja, naitaKontakt, naitaUudised, naitaUudis, tootleSonum} = require("./controller");
+const {naitaMatkad, naitaMatka, registreeriOsaleja, naitaKontakt, tootleSonum, lisaMatk} = require("./controller");
 const { tagastaSonumid, lisaSonum } = require('./api_controller');
-const { tagastaMatkad, lisaMatk } = require('./api_controller');
+const { tagastaMatkad, looMatk } = require('./api_controller');
 
 
 const app = express();
@@ -32,15 +32,16 @@ app.get('/matk/:id', naitaMatka)
 app.get('/kontakt', naitaKontakt)
 app.post('/kontakt', tootleSonum)
 
-app.get('/uudised', naitaUudised)
-app.get('/uudis/:id', naitaUudis)
+/* app.get('/uudised', naitaUudised)
+app.get('/uudis/:id', naitaUudis) */
 
 //API endpoindid
 app.get('/api/sonumid', tagastaSonumid)
 app.post('/api/sonumid', lisaSonum)
 
 app.get('/api/matkad', tagastaMatkad)
-app.post('/api/matkad', lisaMatk)
+//app.post('/api/matkad', lisaMatk)
+app.post('/api/matk', looMatk)
 
 /* app.get('/api/uudised', tagastaUudised)
 app.post('/api/uudised', lisaUudis) */
